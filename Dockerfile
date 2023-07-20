@@ -23,6 +23,9 @@ RUN apt-get update && apt-get install -y libzip-dev \
     && docker-php-ext-install -j$(nproc) gd \ 
 	&& docker-php-ext-install zip 
 
+# Node.js and NPM
+RUN curl -sL https://deb.nodesource.com/setup_18.x | bash - && apt-get install -y nodejs
+
 # laravel environment
 # ----------------------
 RUN mkdir -p /var/www
