@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->string('name',250)->nullable()->default('NULL');
-            $table->string('slug',250)->nullable()->default('NULL');
+            $table->string('name',255)->nullable()->default('NULL');
+            $table->string('slug',255)->nullable()->default('NULL');
             $table->longtext('detail')->nullable()->default('NULL');
-            $table->string('image')->nullable()->default('NULL');
+            $table->string('image',255)->nullable()->default('NULL');
             $table->string('status',20)->default('active');
             $table->timestamps();
         });
