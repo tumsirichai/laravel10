@@ -17,7 +17,6 @@ use App\Http\Controllers\Api\PostController;
 
 Route::prefix('v1')->group(function () {
     Route::apiResource('posts',PostController::class);
-    // Route::resource('posts',PostController::class);
 });
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
